@@ -1,0 +1,4 @@
+interface:
+  display_name: "Market Evidence · 市场与证据"
+  short_description: "用可追溯证据建设知识库、编制技术偏离表并完成市场文件和表格分析"
+  default_prompt: "使用 $market-evidence，根据我提供的资料或表格，完成当前任务并说明证据、统计口径和待核项。"

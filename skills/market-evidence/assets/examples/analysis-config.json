@@ -1,0 +1,25 @@
+{
+  "columns": {
+    "record_id": "record_id",
+    "project_id": "project_id",
+    "date": "date",
+    "stage": "stage",
+    "brand": "brand",
+    "region": "region",
+    "model": "model",
+    "configuration": "configuration",
+    "currency": "currency",
+    "quantity_unit": "quantity_unit",
+    "tax_basis": "tax_basis",
+    "amount_basis": "amount_basis",
+    "amount": "amount",
+    "quantity": "quantity",
+    "unit_price": "unit_price"
+  },
+  "scope": {"stage": "award", "currency": "CNY", "quantity_unit": "unit", "tax_basis": "tax_inclusive", "amount_basis": "line"},
+  "start_date": "2025-01-01",
+  "end_date": "2025-02-28",
+  "group_by": ["brand"],
+  "derive_unit_price": false,
+  "price_relative_tolerance": "0.01"
+}

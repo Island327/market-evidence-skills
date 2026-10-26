@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task": "",
+  "snapshot_at": "",
+  "scope": "",
+  "inputs": [],
+  "method_version": "",
+  "artifacts": [],
+  "checks": [],
+  "limitations": [],
+  "state": "draft",
+  "delivery": {"sent_at": null, "receipt_reference": null, "recipient_import_verified": false}
+}

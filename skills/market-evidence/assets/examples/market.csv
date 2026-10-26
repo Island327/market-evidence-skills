@@ -1,0 +1,10 @@
+record_id,project_id,date,stage,brand,region,model,configuration,currency,quantity_unit,tax_basis,amount_basis,amount,quantity,unit_price
+r001,p001,2025-01-10,award,Brand A,North,A100,standard,CNY,unit,tax_inclusive,line,1000,2,500
+r002,p001,2025-01-11,award,Brand A,North,A100,standard,CNY,unit,tax_inclusive,line,1800,3,600
+r003,p002,2025-02-10,award,Brand B,South,B200,standard,CNY,unit,tax_inclusive,line,2400,4,600
+r004,p003,2025-02-11,award,,South,A100,standard,CNY,unit,tax_inclusive,line,,1,700
+r005,p004,2025-02-12,award,Brand B,North,A100,standard,CNY,unit,tax_inclusive,line,800,,800
+r006,p005,2025-02-13,award,Brand C,North,A100,extended,CNY,unit,tax_inclusive,line,1200,2,600
+r007,p007,2025-02-15,budget,Brand A,East,A100,standard,CNY,unit,tax_inclusive,line,9000,10,900
+r002,p001,2025-01-11,award,Brand A,North,A100,standard,CNY,unit,tax_inclusive,line,1800,3,600
+r008,p006,2025-02-18,award,Brand A,East,A100,standard,CNY,unit,tax_inclusive,line,1000,2,
