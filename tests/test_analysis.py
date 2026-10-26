@@ -171,6 +171,7 @@ class AnalysisTests(unittest.TestCase):
     @unittest.skipIf(openpyxl is None, "optional XLSX reader not installed")
     def test_xlsx_bad_declared_dimensions_still_reads_actual_data(self):
         import zipfile
+        import xml.etree.ElementTree as ET
         with tempfile.TemporaryDirectory() as tmp:
             original = Path(tmp) / "original.xlsx"
             changed = Path(tmp) / "changed.xlsx"
@@ -184,8 +185,12 @@ class AnalysisTests(unittest.TestCase):
                 for item in src.infolist():
                     content = src.read(item.filename)
                     if item.filename == "xl/worksheets/sheet1.xml":
-                        content = content.replace(b'<dimension ref="A1:O10"/>', b'<dimension ref="A1:A1"/>')
-                        self.assertIn(b'<dimension ref="A1:A1"/>', content)
+                        root = ET.fromstring(content)
+                        dimension = root.find("{http://schemas.openxmlformats.org/spreadsheetml/2006/main}dimension")
+                        self.assertIsNotNone(dimension)
+                        self.assertEqual(dimension.get("ref"), "A1:O10")
+                        dimension.set("ref", "A1:A1")
+                        content = ET.tostring(root, encoding="utf-8")
                     dst.writestr(item, content)
             self.assertEqual(len(analyzer.read_table(changed, self.config, "Detail")), 9)
 
